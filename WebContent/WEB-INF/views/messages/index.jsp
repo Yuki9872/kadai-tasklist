@@ -4,17 +4,17 @@
     <c:param name="content">
         <h2>タスク一覧</h2>
         <ul>
-            <c:forEach var="message" items="${messages}">
+            <c:forEach var="task" items="${task}">
                 <li>
-                    <a href="${pageContext.request.contextPath}/show?id=${message.id}">
-                        <c:out value="${message.id}" />
+                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">
+                        <c:out value="${task.id}" />
                     </a>
-                       <c:out value="${message.content}" />
+                    <c:out value="${task.content}" />
                 </li>
             </c:forEach>
         </ul>
 
-        <p><a href="${pageContext.request.contextPath}/new">新規タスク追加</a></p>
+        <p><a href="${pageContext.request.contextPath}/new">タスクの投稿</a></p>
 
     </c:param>
 </c:import>
